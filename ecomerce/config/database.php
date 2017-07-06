@@ -67,7 +67,7 @@ return [
         'pgsql' => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', '127.0.0.1'),
-            'database' => env('DB_DATABASE', 'mercado'),
+            'database' => env('DB_DATABASE', 'ecomer'),
             'username' => env('DB_USERNAME', 'postgres'),
             'password' => env('DB_PASSWORD', '123456'),
             'charset'  => 'utf8',

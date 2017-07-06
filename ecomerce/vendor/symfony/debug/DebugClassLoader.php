@@ -51,15 +51,25 @@ class DebugClassLoader
         }
 
         if (!isset(self::$caseCheck)) {
-            if(!file_exists(strtolower(__FILE__))) {
+            $file = file_exists(__FILE__) ? __FILE__ : rtrim(realpath('.'), DIRECTORY_SEPARATOR);
+            $i = strrpos($file, DIRECTORY_SEPARATOR);
+            $dir = substr($file, 0, 1 + $i);
+            $file = substr($file, 1 + $i);
+            $test = strtoupper($file) === $file ? strtolower($file) : strtoupper($file);
+            $test = realpath($dir.$test);
+
+            if (false === $test || false === $i) {
                 // filesystem is case sensitive
                 self::$caseCheck = 0;
-            } elseif(realpath(strtolower(__FILE__)) === __FILE__) {
-                // filesystem is not case sensitive
+            } elseif (substr($test, -strlen($file)) === $file) {
+                // filesystem is case insensitive and realpath() normalizes the case of characters
                 self::$caseCheck = 1;
-            } else {
-                // filesystem is not case sensitive AND realpath() fails to normalize case
+            } elseif (false !== stripos(PHP_OS, 'darwin')) {
+                // on MacOSX, HFS+ is case insensitive but realpath() doesn't normalize the case of characters
                 self::$caseCheck = 2;
+            } else {
+                // filesystem case checks failed, fallback to disabling them
+                self::$caseCheck = 0;
             }
         }
     }
@@ -166,13 +176,17 @@ class DebugClassLoader
             ErrorHandler::unstackErrors();
 
             throw $e;
+        } catch (\Throwable $e) {
+            ErrorHandler::unstackErrors();
+
+            throw $e;
         }
 
         ErrorHandler::unstackErrors();
 
         $exists = class_exists($class, false) || interface_exists($class, false) || (function_exists('trait_exists') && trait_exists($class, false));
 
-        if ('\\' === $class[0]) {
+        if ($class && '\\' === $class[0]) {
             $class = substr($class, 1);
         }
 
