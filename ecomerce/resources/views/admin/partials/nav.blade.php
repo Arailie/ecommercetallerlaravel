@@ -14,6 +14,7 @@
     <P class="navbar-text"><i class="fa fa-dashboard"></i>Dashboard</p>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"></a></li>
+        <li><a href="{{ route('home')}}">Menu</a></li>
         <li><a href="{{ route('admin.category.index')}}">Categorias</a></li>
         <li><a href="{{ route('admin.product.index')}}">Productos</a></li>
         <li><a href="#">Pedidos</a></li>

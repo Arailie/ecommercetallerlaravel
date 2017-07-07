@@ -4,12 +4,12 @@
 
     <div class="container text-center">
         <div class="page-header">
-            <h1><i class="fa fa-rocket"></i>IMPORTADORA RIVAS - PANEL DE CONTROL</h1>
+            <h1><i class="fa fa-rocket"></i>E.V.E.TECH</h1>
         </div>
         
         <h2>Bienvenido(a) {{ Auth::user()->user }} al Panel de administración de tu tienda en línea.</h2><hr>
-        
-        <div class="row">
+
+                <div class="row">
             
             <div class="col-md-6">
                 <div class="panel">
