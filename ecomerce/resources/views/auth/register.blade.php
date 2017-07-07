@@ -18,6 +18,7 @@
 								        Apellidos
 								        <input class="form-control" type="text" name="last_name" value="{{ old('last_name') }}">
 								    </div>
+
 								    <div class="col-md-6 form-group">
 								        Correo Electronico
 								        <input class="form-control" type="email" name="email" value="{{ old('email') }}">
@@ -35,9 +36,14 @@
 								        Confirme su contraseña
 								        <input class="form-control" type="password" name="password_confirmation">
 								    </div>
+								<div class="col-md-6 form-group">
+									Dirección
+									<input class="form-control" type="text" name="address" value="{{ old('address') }}">
+								</div>
 								    <div class="form-group">
 								        <button class="btn btn-primary" type="submit">Registrar <i class="fa fa-thumbs-up"></i></button>
 								    </div>
+
 							</form>
 						</div>
 				</div>
