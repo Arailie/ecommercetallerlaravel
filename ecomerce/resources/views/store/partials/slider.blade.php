@@ -11,21 +11,21 @@
   <!-- Wrapper for slides -->
    <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="http://static.deskidea.net/es/img2/2013/10/banner_part_auton-164963.jpg" alt="slide1" width="675">
+        <img src="http://beagleboard.org/static/uploads/Banner5_Happy_Bday.png" alt="slide1" width="675">
         <div class="carousel-caption">
-          MATERIAL DE ESCRITORIO
+          Quinto Aniversario
         </div>
       </div>
       <div class="item">
-        <img src="http://static.deskidea.net/es/img2/2013/10/banner_empresas-164962.jpg" alt="slide2">
+        <img src="http://beagleboard.org/static/uploads/Banner7_Arduino.png" alt="slide2">
         <div class="carousel-caption">
-          FOTOCOPIADORAS
+          Arduino te hace la vida mas facil
         </div>
       </div>
         <div class="item">
-        <img src="http://static.deskidea.net/es/img2/2014/07/destructoras14-168969.jpg" alt="slide2">
+        <img src="http://beagleboard.org/static/uploads/Banner1_Maker_Odyssey.png" alt="slide2">
         <div class="carousel-caption">
-          FOTOCOPIADORAS
+          2013
         </div>
       </div>
       

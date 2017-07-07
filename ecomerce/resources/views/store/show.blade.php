@@ -7,7 +7,8 @@
 		<div lass="row">
 			<div class="col-md-6">
 			<div class="product-block">
-				<img src="admin/productos/{{$product->image}}" width="200" height="200">
+                <img src="admin/productos/{{$product->image}}" width="200" height="200">
+				
 			</div>
 			</div>
 			<div class="col-md-6">

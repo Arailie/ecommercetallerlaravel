@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand main-title" href="">E.V.E. TECH</a>
+      <a class="navbar-brand main-title" href="{{ url('admin/home') }}">E.V.E. TECH</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">

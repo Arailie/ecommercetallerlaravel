@@ -7,11 +7,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ route('home') }}">E.V.E Tech</a>
+      <h4 class="navbar-text"><a href="{{ route('home') }}">E.V.E Tech</a></h4>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-    <h4 class="navbar-text">Venta de articulos electronicos</h4>
+<!--    <h4 class="navbar-text">Venta de articulos electronicos</h4>-->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ route('cart-show') }}"><i class="fa fa-shopping-cart"></i></a></li>
         <li><a href="#">Conocenos</a></li>

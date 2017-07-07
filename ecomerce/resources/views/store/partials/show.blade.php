@@ -2,7 +2,8 @@
 @section('content')
 <h1>Detalle del Producto</h1>
 <div class="product-block">
-	<img src="{{$product->image}}" width="300">
+    <img src="admin/productos/{{$product->image}}" width="300">
+	
 </div>
 
 <div class="product-block">
