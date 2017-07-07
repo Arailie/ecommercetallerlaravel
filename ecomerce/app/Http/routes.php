@@ -27,6 +27,8 @@ Route::bind('user',function($user){
 
 Route::resource('producto','Productocontroller');
 
+Route::resource('sucio','Productocontroller');
+
 
 Route::get('/',[
 	'as'=>'home',
@@ -70,6 +72,9 @@ Route::get('order-detail',[
 	'uses'=>'CartController@orderDetail'
 ]);
 
+
+
+
 // Authentication routes...
 //Rutas de autentificacion por metodos post y get
 Route::get('auth/login',[
@@ -99,10 +104,12 @@ Route::post('auth/register',[
 	'uses'=>'Auth\AuthController@postRegister'
 	]);
 
-Route::get('payment',array(
-	'as'=>'payment',
-	'uses'=>'PaypalController@postPayment'
-	));
+Route::get('orden/factura',[
+    'middleware'=>'auth',
+    'as'=>'order-bill',
+    'uses'=>'CartController@billDetail'
+]);
+
 
 Route::get('payment/status',array(
 	'as'=>'payment.status',
@@ -120,3 +127,6 @@ Route::resource('admin/category','Admin\CategoryController');
 Route::resource('admin/product','Admin\ProductController');
 
 Route::resource('admin/user','Admin\UserController');
+
+
+
